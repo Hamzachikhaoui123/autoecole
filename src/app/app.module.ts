@@ -12,6 +12,9 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import { SidebarComponent } from './components/shared/sidebar/sidebar.component';
 import { DashbordComponent } from './components/shared/dashbord/dashbord.component';
 import { HomeComponent } from './components/home/home.component';
+import { ToastrModule, ToastNoAnimation, ToastNoAnimationModule } from 'ngx-toastr';
+import { ClientComponent } from './components/public/client/client.component';
+import { UpdateClientComponent } from './components/public/update-client/update-client.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,11 @@ import { HomeComponent } from './components/home/home.component';
     SidebarComponent,
     DashbordComponent,
     HomeComponent,
+    ClientComponent,
+    UpdateClientComponent,
+    
+
+
     
   ],
   imports: [
@@ -30,6 +38,7 @@ import { HomeComponent } from './components/home/home.component';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    ToastNoAnimationModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

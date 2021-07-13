@@ -10,7 +10,12 @@ import { JwtHelperService } from "@auth0/angular-jwt";
 export class UserService {
  
   private loginUserUrl = "http://localhost:3000/user/login"
+  private registerUserUrl = "http://localhost:3000/user/register";
+
   constructor(private http:HttpClient) { }
+  registerUser(user: any) {
+    return this.http.post<any>(this.registerUserUrl, user);
+  }
   Login(user:any){
     return this.http.post<any>(this.loginUserUrl, user);
 
