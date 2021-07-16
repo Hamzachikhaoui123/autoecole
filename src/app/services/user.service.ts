@@ -56,4 +56,21 @@ export class UserService {
       return false;
     }
   }
+  isLoggedClient() {
+    let token = localStorage.getItem("myToken");
+    if (token) {
+      const helper = new JwtHelperService();
+      const decodedToken = helper.decodeToken(token);
+      if (decodedToken.role == "client") {
+        return true
+      }
+      else {
+        return false
+      }
+
+    }
+    else {
+      return false;
+    }
+  }
 }

@@ -9,21 +9,26 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./client.component.css']
 })
 export class ClientComponent implements OnInit {
- clientList :any[] =[]
-  constructor(private userService:UserService ,private router:Router,private toastr:ToastrService) { }
+  clientList: any[] = []
+  constructor(private userService: UserService, private router: Router, private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.userService.getUserAll().subscribe(
-      res=>{
-        this.clientList = res
+      res => {
+        for (let i = 0; i < res.length; i++) {
+          if (res[i].role == "client") {
+            this.clientList.push(res[i])
+          }
+        }
+
       },
-      err=>{
+      err => {
         console.log(err);
-        
+
       }
     )
   }
-  delete(user:any){
+  delete(user: any) {
     let index = this.clientList.indexOf(user);
     this.clientList.splice(index, 1)
     this.userService.deleteUser(user._id).subscribe(

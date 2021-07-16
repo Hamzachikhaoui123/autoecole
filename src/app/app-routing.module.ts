@@ -33,13 +33,14 @@ const routes: Routes = [
     {
       path:"clientlist",
       component:ClientComponent
-    },
+    }
+    ]
+  }
+  ,
     {
       path:"**",
       component:Page404Component
     }
-    ]
-  }
 ];
 
 @NgModule({
