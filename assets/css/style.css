@@ -65,3 +65,4 @@ p{
 .signreg{
     margin-right: 120px;
 }
+#error{background-color:#ebf3ff;height:100vh;padding-top:5rem}#error .img-error{width:50px}#error .error-title{font-size:4rem;margin-top:3rem}

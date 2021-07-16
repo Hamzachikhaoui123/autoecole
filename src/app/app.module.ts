@@ -13,8 +13,9 @@ import { SidebarComponent } from './components/shared/sidebar/sidebar.component'
 import { DashbordComponent } from './components/shared/dashbord/dashbord.component';
 import { HomeComponent } from './components/home/home.component';
 import { ToastrModule, ToastNoAnimation, ToastNoAnimationModule } from 'ngx-toastr';
-import { ClientComponent } from './components/public/client/client.component';
-import { UpdateClientComponent } from './components/public/update-client/update-client.component';
+
+import { Page404Component } from './components/page404/page404.component';
+import { ClientComponent } from './components/public/admin/client/client.component';
 
 @NgModule({
   declarations: [
@@ -26,12 +27,8 @@ import { UpdateClientComponent } from './components/public/update-client/update-
     SidebarComponent,
     DashbordComponent,
     HomeComponent,
+    Page404Component,
     ClientComponent,
-    UpdateClientComponent,
-    
-
-
-    
   ],
   imports: [
     BrowserModule,

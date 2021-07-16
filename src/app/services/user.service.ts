@@ -11,6 +11,10 @@ export class UserService {
  
   private loginUserUrl = "http://localhost:3000/user/login"
   private registerUserUrl = "http://localhost:3000/user/register";
+  private getallUserUrl = "http://localhost:3000/user/all"
+  private deleteUserUrl = "http://localhost:3000/user/delete/"
+
+
 
   constructor(private http:HttpClient) { }
   registerUser(user: any) {
@@ -19,6 +23,12 @@ export class UserService {
   Login(user:any){
     return this.http.post<any>(this.loginUserUrl, user);
 
+  }
+  getUserAll() {
+    return this.http.get<any>(this.getallUserUrl)
+  }
+  deleteUser(id: String) {
+    return this.http.delete<any>(this.deleteUserUrl + id)
   }
   isLoggedIn() {
     let token = localStorage.getItem("myToken");
