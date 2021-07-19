@@ -19,6 +19,9 @@ export class ClientComponent implements OnInit {
           if (res[i].role == "client") {
             this.clientList.push(res[i])
           }
+          else {
+            this.clientList.push(res[i])
+          }
         }
 
       },

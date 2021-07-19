@@ -16,6 +16,10 @@ import { ToastrModule, ToastNoAnimation, ToastNoAnimationModule } from 'ngx-toas
 
 import { Page404Component } from './components/page404/page404.component';
 import { ClientComponent } from './components/public/admin/client/client.component';
+import { AddComponent } from './components/public/category/add/add.component';
+import { ListComponent } from './components/public/mointeur/list/list.component';
+import { UpdateComponent } from './components/public/mointeur/update/update.component';
+import { DetailsComponent } from './components/public/mointeur/details/details.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +33,10 @@ import { ClientComponent } from './components/public/admin/client/client.compone
     HomeComponent,
     Page404Component,
     ClientComponent,
+    AddComponent,
+    ListComponent,
+    UpdateComponent,
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,

@@ -29,6 +29,9 @@ export class RegisterComponent implements OnInit {
         Validators.required,
         Validators.email
       ]),
+      age: new FormControl('',[
+        Validators.required
+      ]),
       password: new FormControl('', [
         Validators.required,
         Validators.minLength(6)
@@ -43,6 +46,8 @@ export class RegisterComponent implements OnInit {
   get firstname() { return this.registerForm.get("firstname") }
   get lastname() { return this.registerForm.get("lastname") }
   get email() { return this.registerForm.get("email") }
+  get age() { return this.registerForm.get("age") }
+
   get password() { return this.registerForm.get("password") }
   get repassword() { return this.registerForm.get("repassword") }
 
